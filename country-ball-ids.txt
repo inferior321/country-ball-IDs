@@ -1,0 +1,503 @@
+# Countryball ID List
+
+# Additional country balls will be added on a sporadic basis as new IDs are found.
+
+# Sorted in groups. Alternate name shown in *italics* where one ID had two labels.
+
+### Memes, Jokes & Non-Country (32)
+
+129098519739443 — American Empire (Kingdom of America)
+105677939043359 — American Occupied Iran
+89424227870676 — America with White Star in Middle
+78229815322870 — Bacon Hair Male
+17598824734 — Baldi
+17694320720 — Blue
+18545886350 — BOTswana
+17740936750 — CaseOh
+17638665935 — Chicken
+140075539772023 — Comic USA 50 Star
+17505707433 — Douchebag
+17627502245 — Emu Empire
+73223364458998 — Exclamation Mark
+16006771200 — FBI
+16008180864 — Fire in the Hole
+17023292018 — Helleno-Turkism
+139552532201415 — Kiwiliyorum Empire
+15997382574 — Man Face
+131851827380423 — Old France
+16009143376 — Oof
+16004764531 — Pal Face
+15983896718 — Pig
+16010077856 — Smile 2
+122335615445025 — Question Mark
+131012202475399 — Region of Limbobbia
+17094045626 — Space Mexico
+72409660647361 — Terminatorian Greenland
+15793780734 — The SCP Foundation
+111401997435587 — USA 4th of July Special
+127530761525856 — USA Flag Rectangle
+16008808032 — Winning Smile
+16005833272 — Woman Face
+
+### Geographic, Celestial & Conceptual (3)
+
+89208590218326 — Earth State Flag Map
+97561934958974 — North Pole
+131258227086228 — The Moon
+
+### Armies & Military Units (27)
+
+131178272843706 — Argentine Air Force
+94609660279597 — Argentine Army
+89064589710406 — Argentine Navy
+16337035171 — Brunswick Ducal Corps
+17407049631 — Brunswick Ducal Corps [Better]
+17229608644 — Canadian Air Force
+16750352959 — Canadian Armed Forces
+17229600420 — Canadian Army
+17229596701 — Canadian Navy
+18679779267 — Dutch Army [1815-1831]
+17353855284 — KGL
+114109635548798 — KGL2
+18811946118 — Lombard Legion
+16069628674 — Monaco's Legion
+17309270911 — Napoleonic Irlande Legion
+16354251582 — Ottoman Navalid
+104926178867542 — Proa (Naval Ensign of Venezuela)
+18809323551 — Prussian Military Banner
+16741846020 — Serbian Armed Forces
+18518053825 — Swedish Armed Forces
+89793103913201 — Trigarant Army  *(Ejército Trigarante, 1821 Mexican independence)*
+16757143557 — US Air Force
+16757111504 — US Army
+16988722600 — US Coast Guard
+115019482608130 — US Marine Core (Don't give up the ship)  *(sic: Corps)*
+16757146027 — US Marines
+16757138098 — US Navy
+
+### Napoleonic Era (20)
+
+17770038912 — 1815 Switzerland
+17899428248 — Batavian Republic
+16047605464 — Berg
+16923006633 — Confederation of the Danube
+15980360550 — Confederation of the Rhine
+17407046485 — Duchy of Nassau
+15827147124 — Duchy of Warsaw
+17888088346 — First French Republic
+18259087501 — French Empire [1789]
+18966584247 — Kingdom of Westphalia
+18122209039 — Lucca and Piombino
+17182995564 — Napoleonic France
+16896557175 — Napoleonic Italy
+17476507286 — Napoleonic Naples
+18265335839 — Napoleonic Portugal
+17322579533 — Napoleonic Royal Revolutionaries
+17284712984 — Napoleonic Sweden
+113163072508724 — Napoleonic WAYrttemburg
+17897957001 — National Liberation Committee
+138236696954845 — Westphalian Republic
+
+### Soviet & Communist States (20)
+
+139618361396339 — Combat Groups of the Working Class (Germany)
+135423483234707 — Communist India
+16322605616 — Communist Poland
+17294531120 — Don Cossacks
+114903541558450 — East Germany
+87487056359482 — German Democratic Republic
+124438160183397 — German Socialist Republic Council
+18545756489 — Jewish Autonomous Oblast
+17294519008 — Kuban People's Republic
+117526046275264 — Lao People's Revolutionary Youth Union
+18248743734 — People's Republic of Hungary
+92740096520290 — People's Republic of Jeju
+139447252036594 — President of East Germany
+118897554711754 — Socialist Argentine Republic
+136962244650444 — Socialist Rio de Plata
+91786562779575 — The Democratic People's Republic of Ethiopia
+122826386504363 — The Estonian Workers' Commune
+83692757562291 — The Ho Chi Minh Communist Youth Union
+106436421830925 — Warsaw Pact Ball
+137250126387942 — Worker's Union of Argentina
+
+### Hungary (variants & eras) (14)
+
+17783507732 — Austria-Hungary
+16815313554 — Eastern Kingdom of Hungary
+16803060501 — Great Principality of Hungary
+16770840335 — Hungarian Principality
+16675031260 — Hungary
+18248506777 — Hungary [15th century]
+17509130988 — Hungary [I1th century]
+16224719111 — Kingdom of Hungary [130Os]
+16576382011 — Kingdom of Hungary [140Os]
+16769352418 — Kingdom of Hungary [Angels]
+17502715108 — Kingdom of Hungary with Angels
+16074298959 — Rebellious Hungary
+18248510984 — Revolutionary Hungary
+18248513888 — Znd Hungarian Republic
+
+### German States (HRE / Confederation / Empire) (42)
+
+16034721583 — Austria-Bavaria
+18877688924 — Baden-WAYrttemberg
+18301740810 — Bavaria
+94026960781647 — Bavaria [Alts]
+18476866202 — Bayern-Landshut [Var 1]
+18506563707 — Bayern-MAYnchen
+18966598889 — Bremen
+17716906629 — Constitutional Hohenzollerns
+18362659834 — Duchy of Bavaria  *(alt: Electorate of Bavaria)*
+18112700434 — Duchy of Lower Saxony
+17611409342 — Duchy of Prussia
+18122356344 — Duchy of Swabia
+17353852384 — Electorate of Hanover
+18400415386 — Electorate of Salzburg
+18400418180 — Electorate of WAYrttemberg
+89544253857834 — FAYrstentum Westfalen
+16831517521 — Free Prussia
+83188646292139 — German Empire
+16249186350 — Germany With Coat Of Arms
+18342236954 — Hesse
+18966588355 — Hesse-Darmstadt
+18966608060 — Hesse-Nassau
+17716903650 — Imperial Hohenzollerns
+71975805398848 — KAInigreich Bayern  *(alt: KATnigreich Bayern)*
+80593640581780 — KAInigreich Westfalen
+18966586149 — Landgraviate of Hesse
+18966582178 — Lower Saxony
+17495685534 — Margraviate of Brandenburg
+16048618569 — Mecklenberg-Schwerin
+18506324731 — Munich
+18825485118 — North-Rhine Westphalia
+18476882984 — Palatinate
+17716908448 — Prussian Hohenzollerns
+17586609141 — Reiss-Schleitz
+122128541415601 — Rhineland Palatinate
+18250182705 — Saxony
+18259939452 — Saxony
+120872686690058 — Saxony-Anhalt
+95180991264852 — The Hohenstaufen Dynasty
+18400417057 — WAYrzburg
+17513654657 — West Prussia
+18966589826 — Worms [Germany]
+
+### Austria, Bohemia & Habsburg Crownlands (13)
+
+15723348175 — Austria
+18562887433 — Austrian Silesia
+18562890148 — Carinthia
+17814794606 — Carniola [Historical Tricolor]  *(alt: Carniola [Historical TricolorI)*
+17814791057 — Carniola [Stylized]
+17590365388 — Carpathian Ruthenia
+17518033939 — Celje
+17733806311 — Duchy of Stryia
+18373765476 — Kingdom of Bohemia
+18546103475 — Lower Austria
+89041814304342 — Silesia 1869
+17899081152 — Upper Austria
+18562844527 — Vorarlberg
+
+### Italy, Greece & Mediterranean (10)
+
+18159774357 — Duchy of Milan  *(alt: Milan)*
+18362697937 — Duchy of Milan [2]
+18143455181 — Greece
+82770956017842 — Kingdom of Italy [HRE]
+18577631222 — Monacan Empire
+17548817592 — Naples [1808]
+18121575346 — Republic of Venice
+18177269300 — Roman Republic
+18981534713 — Sardinia
+15982581094 — Sicily
+
+### Ottoman & Byzantine (8)
+
+17514949699 — Catholic Byzantine
+16999835599 — Eastern Roman Empire
+17694399461 — Istanbul [Blue]
+17694402142 — Istanbul [Red]
+17509130988 — Mount Athos
+15722106595 — Ottoman
+17051834871 — Ottoman Empire [Green]
+17042252582 — Ottoman-Byzantine
+
+### Ancient & Classical (3)
+
+18159804237 — Arsacid Armenia
+18159809131 — Parthia
+105269664689692 — Mauryan Empire
+
+### France, Low Countries & W. Europe (16)
+
+16256782060 — Alsace
+16235051518 — Aquitaine
+17718030959 — Austrian Netherlands
+18966592067 — Burgundian Netherlands
+17699656728 — Burgundy
+16230562226 — Champagne
+16179848376 — Civil Ensign of Luxembourg
+17320583185 — Dutch Empire
+17719231423 — Flanders
+16734856594 — Francia
+16730888969 — French Southern Lands
+16745901159 — Gibraltar
+17575646715 — Moresnet
+16843677004 — Normandy
+17013886336 — United Kingdom of Netherlands
+17719233188 — Wallonia
+
+### Iberia (2)
+
+87488759890157 — Flag of the Spanish Empire (Cross of Burgundy)
+18159786593 — Habsburg Spain
+
+### Scandinavia (7)
+
+17408264475 — Denmark-Norway
+17873085958 — Denmark-Norway (No Lions)
+16734613417 — Norse
+16735451656 — Norway-Sweden
+17698685116 — Oslo
+16267047113 — Stockholm
+18814867280 — Sweden [COAJ]
+
+### Baltic, Poland & Lithuania (13)
+
+16263054804 — Aland Islands
+17627513533 — Baltic Union
+16178647043 — Courland
+16023366442 — Duchy of Lithuania
+17229626741 — Estonia [CoA]
+17394714630 — Free Poland
+16923395999 — Galicia
+18546100907 — Galicia and Lodomeria
+18235904039 — Lithuanian Provisional Governing
+17521219936 — Livonian Order [?]
+15983990139 — Polish Underground State
+15716068259 — Warsaw
+130417527752116 — Warsaw Uprising Polish Underground Resistance
+
+### Eastern Europe (Romania, Ukraine, Belarus, Montenegro) (6)
+
+16329495351 — Belarus [1991]
+127482976603454 — Belstat
+127261169812907 — City of Budva
+16650450984 — Kingdom of Montenegro
+16589977480 — Kingdom of Romania
+79483781073484 — Ukraine [CoA]
+
+### Balkans & former Yugoslavia (18)
+
+17294219641 — Balkan Federation
+16232561513 — Bosnia [1878]
+16783337146 — Bosnian Croatia
+16843702818 — Dalmatia
+16328898707 — Dardania
+17118505226 — Dubrovnik
+80563550139550 — Greater Finland
+18319812408 — Illyria
+18536502408 — Kingdom of Croatia
+17555455988 — North Epirus
+17575972811 — Padania
+18159796221 — Revolutionary Serbia
+16755750763 — SFR Yugoslavia
+17732272850 — Slavonia
+16235291303 — Slavonia [CoA]
+16769444155 — Vojvodina
+16769432572 — West Bosnia
+15997104192 — West Thrace
+
+#### Belgrade — city municipalities (17)
+
+72179972225409 — Barajevo
+123855992656848 — Čukarica
+73123295993467 — Grocka
+116915546697294 — Lazarevac
+85927105380534 — Mladenovac
+124142834732240 — Novi Beograd
+133677718976966 — Obrenovac
+120075025140781 — Palilula
+81637896219211 — Rakovica
+125177848720664 — Savski Venac
+119252888547319 — Sopot
+73010306971584 — Stari Grad
+111554526515324 — Surčin
+84281876330412 — Voždovac
+140369335341052 — Vračar
+80428956451650 — Zemun
+102820729272384 — Zvezdara
+
+### Russia, Caucasus & Central Asia (15)
+
+17294502565 — Abkhazia
+18249875164 — Chukotka
+17532014047 — Free Dagestan
+16008690733 — Kazakh Khanate
+17129284568 — Moscow
+18111981213 — Nagorno Karabakh [FLIPPED]
+18377684562 — Nagrono Karabakh
+15715504756 — OmskIBlack League
+18159794118 — Russia 1560
+16114169086 — Russia [Bird]
+17576057469 — Russian Alaska
+116040488165267 — Russian Alaska  *(duplicate name, different ID)*
+17500479299 — Saint Petersburg
+17880777557 — South Ossetia
+100059824217073 — The Council of the Russian Republic
+
+### Middle East, Asia & Africa (30)
+
+17118500050 — Baghdad
+17577923911 — Coptic Egypt
+17503665346 — County of Edessa
+112841317784499 — Democratic Republic of Thailand
+75959310068755 — French Egypt
+75334550356237 — Greater Thai Empire
+76756044596227 — Hunan Clique
+18618470635 — Indochina
+16542769684 — Iraq [2004-2001]
+16512230711 — Islamic Organization
+135760246253827 — Japanese Korea
+15723275924 — Joseon
+16579081584 — Kingdom of Benin
+16593916110 — Kingdom of Cilecia
+16579958816 — Kingdom of Cyprus
+79900075286699 — Kingdom of Cyprus  *(duplicate name, different ID)*
+16579964288 — Kingdom of Jerusalem
+16907768965 — Kingdom of Yemen
+107244060705737 — Korean Empire (The Last Empire)
+16923286889 — Kurdistan
+91036488907367 — National Liberation Movement of Ahwaz
+92652473528972 — National Liberation Movement of Ahwaz 2
+17504226157 — Principality of Antioch
+17744887557 — Qajar Iran
+16580077284 — Saudi Arabia [1932-1934]
+16923334946 — South Yemen
+17755696691 — Sultanate of Aceh
+16536499188 — Syria
+74541214305873 — The Goryeo Dynasty
+81942069232717 — Unknown Arab Country
+
+### British Isles (counties & regions) (37)
+
+17857308417 — Anglesey
+17857401561 — Brecknockshire
+15715747151 — Britanny
+80425550283987 — British Empire [House of Windsor]
+17857420187 — Caernafonshire
+16769671359 — Cardiff
+17857431041 — Cerdigion
+15715831984 — Cornwall
+17627600838 — Deheubarth
+17267026694 — Derbyshire
+16810971100 — Devon
+16986766216 — Dorset
+137265782888191 — England [House of Windsor]
+16589834576 — Essex
+16831259316 — Fedral British Republic
+17857441530 — Flintshire
+17857447805 — Glamorgan
+16788777807 — Gloucestershire
+16838157153 — Gwynedd  *(alt: Gywnedd)*
+15728130529 — Isle of Man
+17857485350 — Kirkcudbrightshire
+17792221868 — Leicestershire
+17792227650 — Lincolnshire
+17857504542 — Merionethshire
+16592988899 — Middlesex
+17857518688 — Monmouthsire
+17792233732 — Northamptonshire
+17792243316 — Nottinghamshire
+16742458740 — Orkney Islands
+17627520113 — Powys
+17792255273 — Rutland
+16741403564 — Shetland Islands
+16986676685 — Somerset
+16582454524 — Sussex
+104002567487629 — United Kingdom [House of Windsor]
+87948462158470 — Wales [House of Windsor]
+16732584791 — Yorkshire
+
+### Canada (provinces, territories & cities) (13)
+
+16636246820 — Anchorage
+16791895679 — British Columbia
+16791900414 — Northwest Territories
+16791893881 — Nova Scotia
+16783427602 — Nunavut
+12637411891 — Ontario
+16770334854 — Ottawa
+16791842364 — Saskatchewan
+16783432116 — Scarborough
+116399538720049 — The Proposal Flag of Canada (1928)
+16755570829 — Thunder Bay
+16755581452 — Toronto
+16791903487 — Yukon
+
+### USA, territories & Pacific (13)
+
+16089789099 — 1812 USA
+16576384292 — 1920 USA
+91644216322859 — American Samoa
+81847856690285 — Austin, TX
+126887730215144 — Chicago
+16746229464 — Christmas Island
+128504104833405 — French Polynesia
+15710773310 — Minnesota
+138794879125734 — San Francisco, CA
+134354942199327 — San Jose, CA
+17244613832 — Texas (Alternative)
+17006277272 — Vermont
+16755576233 — Wake Island
+
+### Mexico (states & regions) (15)
+
+84688827015322 — Aztec Triple Alliance
+17287092223 — Baja California [North]
+17502996829 — Baja California [South]
+17383679778 — Campeche
+17291895651 — CDMX
+16988672381 — Chiapas
+17244822952 — Coahuila
+17239504647 — Jalisco
+139815445589207 — Mexican Liberalist Republic
+17094860353 — Northern Mexico
+17266879619 — Nuevo Leon
+17002597006 — Sinaloa
+16938213550 — Tabasco
+17244359485 — Tamaulipas
+17247258579 — Zacatecas
+
+### Ethnic Groups & Indigenous Peoples (12)
+
+111281993955981 — Anyu People from Xinjiang
+17694480695 — Comcaac
+17625521940 — Huastecan
+17625516495 — Mayans
+17625520137 — Nahuatl
+126825022128373 — Ogoni People, Nigeria
+17638618065 — Otomi
+17625526767 — Papago
+17694504554 — Pima
+72532206053546 — The Yi People Flag
+17638620736 — Yaqui
+17625518464 — Yoreme
+
+### Micronations, Orgs & Territories (13)
+
+17751298225 — Antarctica
+18594354133 — Anti-FP
+17599669578 — BRICS
+15734902293 — CIS  *(alt: UIC)*
+16811039441 — Easter Island
+16988767904 — Liberland
+15721950253 — Organization of Free Nations
+16833469826 — Saint Barthelemy
+134899113074968 — Saint Vincent and the Grenadines
+16783417024 — Sint Maarten
+114688498728993 — The Arctic Council
+91073457753466 — The Commonwealth of Independent States
+17605395685 — The Enclave
+

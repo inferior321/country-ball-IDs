@@ -1,6 +1,6 @@
 # Countryball ID List
 
-### Memes, Jokes & Non-Country (69)
+### Memes, Jokes & Non-Country (66)
 
 134439033575943 — -8 Ball (enemy of 8 ball)
 89424227870676 — America with White Star in Middle
@@ -13,10 +13,8 @@
 18377722207 — Basketball
 17694320720 — Blue
 77632453767889 — Blue Argentina Colony
-73520987748987 — Blue Bri'ish Colony
+73520987748987 — Blue British Colony
 18545886350 — BOTswana
-129214108367248 — Bri'ish Russia
-86544733841769 — Bri'ish Singapore
 17740936750 — CaseOh
 17638665935 — Chicken
 90069381546831 — Cockroach
@@ -35,7 +33,6 @@
 92222764388902 — Finnish Michigan
 16008180864 — Fire in the Hole
 18400260737 — Football
-85172408708111 — Graet Bri'ain Colonei
 17023292018 — Helleno-Turkism
 139552532201415 — Kiwiliyorum Empire
 119955292517191 — Male Arrow Symbol
@@ -51,7 +48,7 @@
 94133757735408 — Portuguese Player of Football (World Cup 2026)
 122335615445025 — Question Mark
 71419858692476 — Red Argentina Colony
-79749486150630 — Red Bri'ish Colony
+79749486150630 — Red British Colony
 131012202475399 — Region of Limbobbia
 15716191972 — Respublika de Italiano
 109892189501700 — Russia Sp00k
@@ -68,7 +65,7 @@
 16008808032 — Winning Smile
 16005833272 — Woman Face
 109288380717372 — Yellow Argentina Colony
-94308658174572 — Yellow Bri'ish Colony
+94308658174572 — Yellow British Colony
 102318370373211 — Yemen but Dragen
 17604741390 — Zombie
 
@@ -561,6 +558,11 @@
 104002567487629 — United Kingdom [House of Windsor]
 87948462158470 — Wales [House of Windsor]
 16732584791 — Yorkshire
+
+### British Colonies (2)
+
+129214108367248 — British Russia
+86544733841769 — British Singapore
 
 ### Canada (provinces, territories & cities) (12)
 

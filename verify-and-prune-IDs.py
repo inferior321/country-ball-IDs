@@ -7,15 +7,26 @@ ASSET-DELIVERY API, which (unlike the thumbnail API) reports the real state of
 an asset -- alive / archived / deleted / moderated -- and does NOT suffer the
 "Pending" false-negative that made the old script keep junk and drop nothing.
 
-INPUT FORMAT (the only one supported)
+INPUT FORMAT
     Lines of the form:
 
         123456789 — Poland
 
-    i.e. an asset ID of 6+ digits at the start of the line, whitespace, then an
-    EM DASH (U+2014). Anything else on the line is ignored. Lines that do not
-    match are copied to the output untouched and are never candidates for
-    removal. The file extension is irrelevant -- .md, .txt, whatever.
+    i.e. an asset ID of 6+ digits at the start of the line, then a separator,
+    then anything. The separator may be ANY of these dashes:
+
+        -  hyphen-minus   U+002D
+        –  en dash        U+2013
+        —  em dash        U+2014
+        ―  horizontal bar U+2015
+        −  minus sign     U+2212
+        ー katakana bar   U+30FC
+
+    Surrounding spaces are optional, so `123456789—Poland` matches too.
+    Anything that is not an ID line is copied to the output untouched and is
+    never a candidate for removal. The 6-digit minimum means ordinary numbered
+    prose ("1 — Introduction") can never be mistaken for an asset ID.
+    The file extension is irrelevant -- .md, .txt, whatever.
 
 Why asset-delivery is more accurate than thumbnails
     * thumbnail API renders on demand  -> first hit says "Pending" for GOOD
@@ -40,12 +51,12 @@ WHAT GETS REMOVED
     never modified; output goes to the path you pass.
 
 USAGE
-    python verify_ids.py countryballs.txt cleaned.txt
-    python verify_ids.py in.txt out.txt --dry-run
-    python verify_ids.py in.txt out.txt --keep-archived --keep-moderated
-    python verify_ids.py in.txt out.txt --cookie "<.ROBLOSECURITY value>"
-    python verify_ids.py in.txt out.txt --encoding cp1252
-    ROBLOSECURITY=xxxx python verify_ids.py in.txt out.txt   # cookie via env
+    python3 verify_ids.py countryballs.txt cleaned.txt
+    python3 verify_ids.py in.txt out.txt --dry-run
+    python3 verify_ids.py in.txt out.txt --keep-archived --keep-moderated
+    python3 verify_ids.py in.txt out.txt --cookie "<.ROBLOSECURITY value>"
+    python3 verify_ids.py in.txt out.txt --encoding cp1252
+    ROBLOSECURITY=xxxx python3 verify_ids.py in.txt out.txt   # cookie via env
 
 NOTES
     * A .ROBLOSECURITY cookie is OPTIONAL. Public decals usually resolve without
@@ -53,6 +64,8 @@ NOTES
       share come back RESTRICTED, re-run with --cookie.
     * A log of every removed line is written next to the output as
       <outfile>.removed.txt so the record survives your terminal scrollback.
+    * Always sanity-check the "Found N unique asset IDs" line before letting it
+      write. If N is far off, stop -- something is wrong with the input.
 
 Standard library only.
 """
@@ -72,15 +85,11 @@ ASSET_URL = "https://assetdelivery.roblox.com/v1/assetId/{id}"
 MAX_RETRIES = 4
 WORKERS = 6
 
-# The ONE supported line format:  123456789 — Name
-# 6+ digits so ordinary numbered prose ("1 — Introduction") can't be mistaken
+# Any of the common dash characters, with optional whitespace on either side.
+# 6+ digits so ordinary numbered prose ("1 - Introduction") can't be mistaken
 # for an asset ID and deleted.
-ID_LINE = re.compile(r'^\s*(\d{6,})\s+\u2014')
-
-# Same shape but with a hyphen or en dash instead of an em dash. These are NOT
-# processed -- they are only detected so they can be reported, because a
-# silently-skipped line looks identical to a verified-good one.
-NEAR_MISS = re.compile(r'^\s*\d{6,}\s+[-\u2013]')
+DASHES = "\u002d\u2013\u2014\u2015\u2212\u30fc"
+ID_LINE = re.compile(r'^\s*(\d{6,})\s*[' + DASHES + r']\s*')
 
 HEADER = re.compile(r'^(#{1,6}\s.*?)\s*\((\d+)\)\s*$')   # trailing (N) on a header
 
@@ -203,8 +212,9 @@ def read_lines(path, encoding):
     except UnicodeDecodeError as e:
         sys.exit(
             f"Could not decode {path} as {encoding}: {e}\n"
-            "  The em dash is non-ASCII, so a wrong encoding breaks every line.\n"
-            "  Try:  --encoding cp1252    (Windows Notepad / Excel exports)\n"
+            "  Most lists are plain UTF-8 -- try the default first (drop the\n"
+            "  --encoding flag entirely). Otherwise:\n"
+            "        --encoding cp1252    (Windows Notepad / Excel exports)\n"
             "        --encoding utf-16    (Notepad 'Unicode' save)\n"
             "        --encoding latin-1   (last resort, never fails)"
         )
@@ -212,7 +222,7 @@ def read_lines(path, encoding):
 
 def main():
     ap = argparse.ArgumentParser(
-        description="Verify + clean Roblox asset IDs in a list of '<id> — <name>' lines")
+        description="Verify + clean Roblox asset IDs in a list of '<id> - <name>' lines")
     ap.add_argument("infile")
     ap.add_argument("outfile", help="output path you choose")
     ap.add_argument("--cookie", default=os.environ.get("ROBLOSECURITY", ""),
@@ -241,25 +251,15 @@ def main():
             seen.add(m.group(1))
             ids.append(m.group(1))
 
-    # Warn about lines that are ALMOST the right format. Left untouched, they
-    # would sail through looking verified.
-    near = [ln.strip() for ln in lines if NEAR_MISS.match(ln)]
-    if near:
-        print(f"! {len(near)} line(s) use a hyphen or en dash where an em dash (\u2014) "
-              "is expected.\n  These are NOT checked and NOT removed:")
-        for ln in near[:5]:
-            print(f"    {ln}")
-        if len(near) > 5:
-            print(f"    ... and {len(near) - 5} more")
-        print()
-
-    # Fail fast: without this, a bad encoding or wrong dash yields 0 IDs and the
-    # script writes a byte-identical copy that looks like a successful run.
+    # Fail fast: without this, a bad encoding yields 0 IDs and the script writes
+    # a byte-identical copy that looks like a successful run.
     if not ids:
         sys.exit(
-            "No IDs matched the expected format '<6+ digits> \u2014 <name>'.\n"
-            "  Check the file encoding (--encoding) and that the separator is a\n"
-            "  true em dash (\u2014, U+2014), not a hyphen or en dash."
+            "No IDs matched the expected format '<6+ digits><dash><name>'.\n"
+            "  Every common dash is accepted, so this is almost certainly an\n"
+            "  encoding problem, or the numbers are not at the start of the line.\n"
+            "  Try --encoding cp1252 / utf-16 / latin-1, and check the file for a\n"
+            "  bullet or quote character in front of the IDs."
         )
 
     print(f"Found {len(ids)} unique asset IDs\n")

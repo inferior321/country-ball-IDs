@@ -1,6 +1,6 @@
 # Countryball ID List
 
-### Memes, Jokes & Non-Country (66)
+### Memes, Jokes & Non-Country (55)
 
 134439033575943 — -8 Ball (enemy of 8 ball)
 89424227870676 — America with White Star in Middle
@@ -8,23 +8,19 @@
 105677939043359 — American Occupied Iran
 18362836368 — Australia-Hungary
 78229815322870 — Bacon Hair Male
-17598824734 — Baldi
 18362357705 — Baseball
 18377722207 — Basketball
 17694320720 — Blue
 77632453767889 — Blue Argentina Colony
 73520987748987 — Blue British Colony
 18545886350 — BOTswana
-17740936750 — CaseOh
 17638665935 — Chicken
 90069381546831 — Cockroach
 89474480552790 — Cockroach Rebellion (Cockroach Janta Party)
 140075539772023 — Comic USA 50 Star
-16503296341 — Communismer Saudia
 135008295775519 — Cool Britain
 109178749587166 — Cool German Empire
 130099092714653 — Cool Swatzerlond
-17505707433 — Douchebag
 17627502245 — Emu Empire
 73223364458998 — Exclamation Mark
 16006771200 — FBI
@@ -36,12 +32,9 @@
 17023292018 — Helleno-Turkism
 139552532201415 — Kiwiliyorum Empire
 119955292517191 — Male Arrow Symbol
-15997382574 — Man Face
 135417059226890 — Oil Container (Black)
 83257645576320 — Oil Container (White)
 131851827380423 — Old France
-16009143376 — Oof
-16004764531 — Pal Face
 15983896718 — Pig
 87218821541098 — Polish Cow Meme
 99231912927059 — Polish Cow Meme (with Poland)
@@ -50,9 +43,7 @@
 71419858692476 — Red Argentina Colony
 79749486150630 — Red British Colony
 131012202475399 — Region of Limbobbia
-15716191972 — Respublika de Italiano
 109892189501700 — Russia Sp00k
-16010077856 — Smile 2
 17094045626 — Space Mexico
 98487400591200 — Spaint
 18368850111 — Tennisball
@@ -62,12 +53,28 @@
 18506587615 — Toxic Radiation Symbol
 111401997435587 — USA 4th of July Special
 127530761525856 — USA Flag Rectangle
-16008808032 — Winning Smile
-16005833272 — Woman Face
 109288380717372 — Yellow Argentina Colony
 94308658174572 — Yellow British Colony
 102318370373211 — Yemen but Dragen
 17604741390 — Zombie
+
+#### Faces (8)
+
+16751457364 — Handsome Face
+15997382574 — Man Face (Sigma Face)
+17505707433 — Mewing Face (Douchebag)
+16009143376 — Oof Face
+16004764531 — Pal Face
+74744184775110 — Verity (Smiley Face)
+16008808032 — Winning Smile
+16005833272 — Woman Face
+
+#### Characters (4)
+
+17598824734 — Baldi
+18596125922 — Bonzi Buddy
+17740936750 — CaseOh
+16010077856 — Pou (Smile 2)
 
 ### Celestial, Geographic & Conceptual (17)
 
@@ -154,7 +161,7 @@
 17897957001 — National Liberation Committee
 138236696954845 — Westphalian Republic
 
-### Soviet & Communist States (22)
+### Soviet & Communist States (21)
 
 139618361396339 — Combat Groups of the Working Class (Germany)
 135423483234707 — Communist India
@@ -168,7 +175,6 @@
 117526046275264 — Lao People's Revolutionary Youth Union
 18248743734 — People's Republic of Hungary
 92740096520290 — People's Republic of Jeju
-18804927273 — Persian SSR
 139447252036594 — President of East Germany
 118897554711754 — Socialist Argentine Republic
 77140431810987 — Socialist Republic of Kazakhstan
@@ -420,7 +426,7 @@
 80428956451650 — Zemun
 102820729272384 — Zvezdara
 
-### Russia — states, empires & eras (39)
+### Russia — states, empires & eras (38)
 
 85342020254671 — 1914 National Flag of the Russian Empire 1
 89820466314409 — 1914 National Flag of the Russian Empire 2
@@ -430,7 +436,6 @@
 100497893724423 — Dimitry Donskoy at the Battle of Kulikovo
 17532014047 — Free Dagestan
 98145051870615 — Imperial Russian CoA (1721-1725)
-135971982245332 — Kaliningrad, Russia
 17129284568 — Moscow
 114692579733323 — Novgorod Republic
 15715504756 — OmskIBlack League
@@ -666,7 +671,7 @@
 17638620736 — Yaqui
 17625518464 — Yoreme
 
-### Micronations, Orgs & Territories (18)
+### Micronations, Orgs & Territories (17)
 
 17751298225 — Antarctica
 18594354133 — Anti-FP
@@ -677,7 +682,6 @@
 84890564549540 — Guadeloupe
 16988767904 — Liberland
 80291425242342 — Mayotte
-135286143429665 — New Caledonia
 15721950253 — Organization of Free Nations
 16833469826 — Saint Barthelemy
 134899113074968 — Saint Vincent and the Grenadines

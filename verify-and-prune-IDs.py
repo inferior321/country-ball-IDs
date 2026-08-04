@@ -12,8 +12,10 @@ INPUT FORMAT
 
         123456789 — Poland
 
-    i.e. an asset ID of 6+ digits at the start of the line, then a separator,
-    then anything. The separator may be ANY of these dashes:
+    i.e. an asset ID of 6+ digits, then a separator, then anything. Leading
+    whitespace is allowed, so entries may be indented under their headings --
+    the indentation is preserved verbatim in the output. The separator may be
+    ANY of these dashes:
 
         -  hyphen-minus   U+002D
         –  en dash        U+2013
@@ -41,8 +43,8 @@ Why asset-delivery is more accurate than thumbnails
 
 WHAT GETS REMOVED
     GONE      always
-    ARCHIVED  unless --keep-archived   (archiving is reversible by the owner)
-    MODERATED unless --keep-moderated
+    ARCHIVED  unless "keep archived" is ON (archiving is reversible by the owner)
+    MODERATED unless "keep moderated" is ON
     Everything else -- PENDING / RESTRICTED / UNKNOWN -- is KEPT and printed
     under "KEPT, worth a look". A dropped connection or a rate-limit wall
     degrades to UNKNOWN, so a bad network run can never silently gut the file.
@@ -51,17 +53,21 @@ WHAT GETS REMOVED
     never modified; output goes to the path you pass.
 
 USAGE
-    python3 verify_ids.py countryballs.txt cleaned.txt
-    python3 verify_ids.py in.txt out.txt --dry-run
-    python3 verify_ids.py in.txt out.txt --keep-archived --keep-moderated
-    python3 verify_ids.py in.txt out.txt --cookie "<.ROBLOSECURITY value>"
-    python3 verify_ids.py in.txt out.txt --encoding cp1252
-    ROBLOSECURITY=xxxx python3 verify_ids.py in.txt out.txt   # cookie via env
+    python3 verify-and-prune-IDs.py
+
+    There are no command-line flags. Everything is chosen from an interactive
+    menu: input and output paths, dry run, cookie, whether to keep archived or
+    moderated assets, worker count and input encoding. Toggle a setting by
+    typing its number, press enter to run, q to quit. After a run you land back
+    on the menu, so the normal loop is: dry run -> read the report -> toggle
+    dry run off -> run for real.
+
+    ROBLOSECURITY=xxxx python3 verify-and-prune-IDs.py   # pre-seeds the cookie
 
 NOTES
     * A .ROBLOSECURITY cookie is OPTIONAL. Public decals usually resolve without
       one, but supplying it eliminates "RESTRICTED" false positives. If a large
-      share come back RESTRICTED, re-run with --cookie.
+      share come back RESTRICTED, set one from the menu and re-run.
     * A log of every removed line is written next to the output as
       <outfile>.removed.txt so the record survives your terminal scrollback.
     * Always sanity-check the "Found N unique asset IDs" line before letting it
@@ -76,9 +82,10 @@ import sys
 import json
 import time
 import random
-import argparse
+import getpass
 import urllib.request
 import urllib.error
+from types import SimpleNamespace
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 ASSET_URL = "https://assetdelivery.roblox.com/v1/assetId/{id}"
@@ -90,8 +97,6 @@ WORKERS = 6
 # for an asset ID and deleted.
 DASHES = "\u002d\u2013\u2014\u2015\u2212\u30fc"
 ID_LINE = re.compile(r'^\s*(\d{6,})\s*[' + DASHES + r']\s*')
-
-HEADER = re.compile(r'^(#{1,6}\s.*?)\s*\((\d+)\)\s*$')   # trailing (N) on a header
 
 ALIVE, GONE, ARCHIVED, MODERATED, PENDING, RESTRICTED, UNKNOWN = (
     "ALIVE", "GONE", "ARCHIVED", "MODERATED", "PENDING", "RESTRICTED", "UNKNOWN")
@@ -194,16 +199,6 @@ def check_all(ids, cookie, workers):
     return status
 
 
-def survivors(lines, header_idx, removed):
-    n = 0
-    for j in range(header_idx + 1, len(lines)):
-        if lines[j].startswith("#"):
-            break
-        if ID_LINE.match(lines[j]) and j not in removed:
-            n += 1
-    return n
-
-
 def read_lines(path, encoding):
     """Read the input, failing loudly and usefully on an encoding mismatch."""
     try:
@@ -212,36 +207,18 @@ def read_lines(path, encoding):
     except UnicodeDecodeError as e:
         sys.exit(
             f"Could not decode {path} as {encoding}: {e}\n"
-            "  Most lists are plain UTF-8 -- try the default first (drop the\n"
-            "  --encoding flag entirely). Otherwise:\n"
-            "        --encoding cp1252    (Windows Notepad / Excel exports)\n"
-            "        --encoding utf-16    (Notepad 'Unicode' save)\n"
-            "        --encoding latin-1   (last resort, never fails)"
+            "  Most lists are plain UTF-8 -- try the default utf-8-sig first.\n"
+            "  Otherwise set encoding (menu option 8) to one of:\n"
+            "        cp1252     (Windows Notepad / Excel exports)\n"
+            "        utf-16     (Notepad 'Unicode' save)\n"
+            "        latin-1    (last resort, never fails)"
         )
 
 
-def main():
-    ap = argparse.ArgumentParser(
-        description="Verify + clean Roblox asset IDs in a list of '<id> - <name>' lines")
-    ap.add_argument("infile")
-    ap.add_argument("outfile", help="output path you choose")
-    ap.add_argument("--cookie", default=os.environ.get("ROBLOSECURITY", ""),
-                    help=".ROBLOSECURITY cookie value (optional, improves accuracy)")
-    ap.add_argument("--keep-moderated", action="store_true",
-                    help="keep moderated assets (default removes them)")
-    ap.add_argument("--keep-archived", action="store_true",
-                    help="keep archived assets -- archiving is reversible by the "
-                         "owner, so these are recoverable (default removes them)")
-    ap.add_argument("--dry-run", action="store_true",
-                    help="check everything and report, but write no files")
-    ap.add_argument("--encoding", default="utf-8-sig",
-                    help="input encoding (default utf-8-sig: plain UTF-8, but "
-                         "also strips a leading BOM if present)")
-    ap.add_argument("--workers", type=int, default=WORKERS)
-    args = ap.parse_args()
-
-    workers = max(1, args.workers)
-    lines = read_lines(args.infile, args.encoding)
+def run(cfg):
+    """Do the actual verify + prune pass using an already-populated config."""
+    workers = max(1, cfg.workers)
+    lines = read_lines(cfg.infile, cfg.encoding)
 
     # --- collect IDs -------------------------------------------------------
     ids, seen = [], set()
@@ -258,19 +235,19 @@ def main():
             "No IDs matched the expected format '<6+ digits><dash><name>'.\n"
             "  Every common dash is accepted, so this is almost certainly an\n"
             "  encoding problem, or the numbers are not at the start of the line.\n"
-            "  Try --encoding cp1252 / utf-16 / latin-1, and check the file for a\n"
+            "  Try encoding cp1252 / utf-16 / latin-1, and check the file for a\n"
             "  bullet or quote character in front of the IDs."
         )
 
     print(f"Found {len(ids)} unique asset IDs\n")
 
     # --- verify ------------------------------------------------------------
-    status = check_all(ids, args.cookie, workers)
+    status = check_all(ids, cfg.cookie, workers)
 
     remove = {GONE}
-    if not args.keep_archived:
+    if not cfg.keep_archived:
         remove.add(ARCHIVED)
-    if not args.keep_moderated:
+    if not cfg.keep_moderated:
         remove.add(MODERATED)
 
     removed_idx, removed_log, flagged_log = set(), [], []
@@ -290,17 +267,13 @@ def main():
     for idx, ln in enumerate(lines):
         if idx in removed_idx:
             continue
-        if ln.startswith("#"):
-            hm = HEADER.match(ln)
-            if hm:
-                ln = f"{hm.group(1)} ({survivors(lines, idx, removed_idx)})"
         out.append(ln)
 
-    log_path = args.outfile + ".removed.txt"
-    if args.dry_run:
+    log_path = cfg.outfile + ".removed.txt"
+    if cfg.dry_run:
         print("\n(dry run -- no files written)")
     else:
-        with open(args.outfile, "w", encoding="utf-8") as fh:
+        with open(cfg.outfile, "w", encoding="utf-8") as fh:
             fh.write("\n".join(out) + "\n")
         if removed_log:
             with open(log_path, "w", encoding="utf-8") as fh:
@@ -315,21 +288,21 @@ def main():
     for k in (ALIVE, GONE, ARCHIVED, MODERATED, PENDING, RESTRICTED, UNKNOWN):
         if tally.get(k):
             kept = ""
-            if k == ARCHIVED and args.keep_archived:
+            if k == ARCHIVED and cfg.keep_archived:
                 kept = "  (kept)"
-            elif k == MODERATED and args.keep_moderated:
+            elif k == MODERATED and cfg.keep_moderated:
                 kept = "  (kept)"
             print(f"  {k:11} {tally[k]}{kept}")
     print(f"\n  lines removed : {len(removed_idx)}")
-    if args.dry_run:
+    if cfg.dry_run:
         print("  written to    : nothing (dry run)")
     else:
-        print(f"  written to    : {args.outfile}")
+        print(f"  written to    : {cfg.outfile}")
         if removed_log:
             print(f"  removal log   : {log_path}")
 
-    if tally.get(RESTRICTED, 0) > len(ids) * 0.2 and not args.cookie:
-        print("\n  ! Many RESTRICTED results -- re-run with --cookie <.ROBLOSECURITY>"
+    if tally.get(RESTRICTED, 0) > len(ids) * 0.2 and not cfg.cookie:
+        print("\n  ! Many RESTRICTED results -- set a cookie in the menu (option 4)"
               "\n    for accurate classification of those.")
 
     if removed_log:
@@ -340,6 +313,148 @@ def main():
         print("\n--- KEPT, worth a look ---")
         for st, txt in flagged_log:
             print(f"  [{st}] {txt}")
+
+
+# ---------------------------------------------------------------------------
+# Interactive menu
+# ---------------------------------------------------------------------------
+
+def default_outfile(infile):
+    """cleaned.txt sitting next to the input, never the input itself."""
+    stem, ext = os.path.splitext(infile)
+    return f"{stem}.cleaned{ext or '.txt'}"
+
+
+def count_ids(path, encoding):
+    """Peek at the input so the menu can show a count before anything runs.
+
+    Returns (count, error_message). Never raises -- a bad path or encoding
+    should show up as a note in the menu, not a traceback.
+    """
+    try:
+        with open(path, encoding=encoding) as fh:
+            text = fh.read()
+    except FileNotFoundError:
+        return None, "file not found"
+    except (UnicodeDecodeError, LookupError):
+        return None, f"cannot decode as {encoding}"
+    except OSError as e:
+        return None, str(e)
+    seen = set()
+    for ln in text.splitlines():
+        m = ID_LINE.match(ln)
+        if m:
+            seen.add(m.group(1))
+    return len(seen), None
+
+
+def ask(prompt_text, default=""):
+    """input() that survives ctrl-c / ctrl-d and falls back to the default."""
+    try:
+        return input(prompt_text).strip() or default
+    except (EOFError, KeyboardInterrupt):
+        print()
+        return default
+
+
+def show_menu(cfg):
+    n, err = count_ids(cfg.infile, cfg.encoding)
+    if err:
+        detail = f"  ({err})"
+    else:
+        detail = f"  ({n} unique IDs)"
+
+    same = os.path.abspath(cfg.infile) == os.path.abspath(cfg.outfile)
+    cookie_state = f"set ({len(cfg.cookie)} chars)" if cfg.cookie else "not set"
+
+    print("\n" + "=" * 62)
+    print(" Roblox asset-ID verifier")
+    print("=" * 62)
+    print(f"  1) Input file      {cfg.infile}{detail}")
+    print(f"  2) Output file     {cfg.outfile}"
+          f"{'   ** SAME AS INPUT **' if same else ''}")
+    print(f"  3) Dry run         {'ON  (check only, write nothing)' if cfg.dry_run else 'OFF (will write output)'}")
+    print(f"  4) Cookie          {cookie_state}")
+    print(f"  5) Keep archived   {'ON  (keep them)' if cfg.keep_archived else 'OFF (remove them)'}")
+    print(f"  6) Keep moderated  {'ON  (keep them)' if cfg.keep_moderated else 'OFF (remove them)'}")
+    print(f"  7) Workers         {cfg.workers}")
+    print(f"  8) Encoding        {cfg.encoding}")
+    print("-" * 62)
+    print("  [enter] run    [q] quit")
+
+
+def menu(cfg):
+    while True:
+        show_menu(cfg)
+        choice = ask("> ").lower()
+
+        if choice in ("q", "quit", "exit"):
+            print("nothing run.")
+            return
+        if choice == "":
+            n, err = count_ids(cfg.infile, cfg.encoding)
+            if err:
+                print(f"\n  ! cannot read {cfg.infile}: {err}")
+                continue
+            if not n:
+                print(f"\n  ! no asset IDs found in {cfg.infile} -- check the encoding.")
+                continue
+            if (not cfg.dry_run
+                    and os.path.abspath(cfg.infile) == os.path.abspath(cfg.outfile)):
+                warn = ask("\n  ! output is the SAME as input -- this overwrites your\n"
+                           "    source list in place. type 'yes' to confirm: ")
+                if warn.lower() != "yes":
+                    print("  cancelled.")
+                    continue
+            print()
+            run(cfg)
+            ask("\n[enter] back to menu ")
+            continue
+
+        if choice == "1":
+            cfg.infile = ask(f"  input file [{cfg.infile}]: ", cfg.infile)
+        elif choice == "2":
+            cfg.outfile = ask(f"  output file [{cfg.outfile}]: ", cfg.outfile)
+        elif choice == "3":
+            cfg.dry_run = not cfg.dry_run
+        elif choice == "4":
+            print("  paste the .ROBLOSECURITY value (input hidden, blank clears it)")
+            try:
+                cfg.cookie = getpass.getpass("  cookie: ").strip()
+            except (EOFError, KeyboardInterrupt):
+                print()
+        elif choice == "5":
+            cfg.keep_archived = not cfg.keep_archived
+        elif choice == "6":
+            cfg.keep_moderated = not cfg.keep_moderated
+        elif choice == "7":
+            raw = ask(f"  workers [{cfg.workers}]: ", str(cfg.workers))
+            if raw.isdigit() and int(raw) > 0:
+                cfg.workers = int(raw)
+            else:
+                print("  ! workers must be a positive whole number -- unchanged.")
+        elif choice == "8":
+            cfg.encoding = ask(f"  encoding [{cfg.encoding}]  "
+                               f"(utf-8-sig / cp1252 / utf-16 / latin-1): ", cfg.encoding)
+        else:
+            print("  ! pick 1-8, enter to run, or q to quit.")
+
+
+def main():
+    infile = "country-ball-ids.txt"
+    cfg = SimpleNamespace(
+        infile=infile,
+        outfile=default_outfile(infile),
+        cookie=os.environ.get("ROBLOSECURITY", ""),
+        dry_run=False,
+        keep_archived=False,
+        keep_moderated=False,
+        workers=WORKERS,
+        encoding="utf-8-sig",
+    )
+    if not sys.stdin.isatty():
+        sys.exit("This script is interactive -- run it from a terminal.")
+    menu(cfg)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,19 @@
+# Claude Code workspace
+.claude/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Output written by verify-and-prune-IDs.py
+*.cleaned.txt
+*.removed.txt
+
+# OS / editor junk (this repo lives on a drive shared with Windows)
+.DS_Store
+Thumbs.db
+desktop.ini
+*~
+*.swp

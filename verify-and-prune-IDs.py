@@ -55,19 +55,23 @@ WHAT GETS REMOVED
 USAGE
     python3 verify-and-prune-IDs.py
 
-    There are no command-line flags. Everything is chosen from an interactive
-    menu: input and output paths, dry run, cookie, whether to keep archived or
-    moderated assets, worker count and input encoding. Toggle a setting by
-    typing its number, press enter to run, q to quit. After a run you land back
-    on the menu, so the normal loop is: dry run -> read the report -> toggle
-    dry run off -> run for real.
+    There are no command-line flags and no built-in filenames. On start the
+    script loads the cookie, then asks for the input and output paths -- both
+    are required, every run. After that you land on a menu for the remaining
+    settings: keep archived, keep moderated, worker count, input encoding.
+    Toggle a setting by typing its number, press enter to run, q to quit.
 
-    ROBLOSECURITY=xxxx python3 verify-and-prune-IDs.py   # pre-seeds the cookie
+COOKIE
+    A .ROBLOSECURITY cookie is REQUIRED, and is read from cookie.txt sitting
+    next to this script. The script refuses to start without it. To create it:
+
+        browser -> F12 -> Application / Storage -> Cookies -> roblox.com
+        -> .ROBLOSECURITY -> paste the whole value into cookie.txt
+
+    Copy the value verbatim, "DO-NOT-SHARE" banner and all. cookie.txt is
+    gitignored -- never commit or share it, it is a full login to your account.
 
 NOTES
-    * A .ROBLOSECURITY cookie is OPTIONAL. Public decals usually resolve without
-      one, but supplying it eliminates "RESTRICTED" false positives. If a large
-      share come back RESTRICTED, set one from the menu and re-run.
     * A log of every removed line is written next to the output as
       <outfile>.removed.txt so the record survives your terminal scrollback.
     * Always sanity-check the "Found N unique asset IDs" line before letting it
@@ -82,7 +86,6 @@ import sys
 import json
 import time
 import random
-import getpass
 import urllib.request
 import urllib.error
 from types import SimpleNamespace
@@ -91,6 +94,9 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 ASSET_URL = "https://assetdelivery.roblox.com/v1/assetId/{id}"
 MAX_RETRIES = 4
 WORKERS = 6
+
+# Always next to the script, so it does not matter where you launch from.
+COOKIE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cookie.txt")
 
 # Any of the common dash characters, with optional whitespace on either side.
 # 6+ digits so ordinary numbered prose ("1 - Introduction") can't be mistaken
@@ -270,15 +276,12 @@ def run(cfg):
         out.append(ln)
 
     log_path = cfg.outfile + ".removed.txt"
-    if cfg.dry_run:
-        print("\n(dry run -- no files written)")
-    else:
-        with open(cfg.outfile, "w", encoding="utf-8") as fh:
-            fh.write("\n".join(out) + "\n")
-        if removed_log:
-            with open(log_path, "w", encoding="utf-8") as fh:
-                for st, txt in removed_log:
-                    fh.write(f"[{st}] {txt}\n")
+    with open(cfg.outfile, "w", encoding="utf-8") as fh:
+        fh.write("\n".join(out) + "\n")
+    if removed_log:
+        with open(log_path, "w", encoding="utf-8") as fh:
+            for st, txt in removed_log:
+                fh.write(f"[{st}] {txt}\n")
 
     # --- summary -----------------------------------------------------------
     tally = {}
@@ -294,16 +297,13 @@ def run(cfg):
                 kept = "  (kept)"
             print(f"  {k:11} {tally[k]}{kept}")
     print(f"\n  lines removed : {len(removed_idx)}")
-    if cfg.dry_run:
-        print("  written to    : nothing (dry run)")
-    else:
-        print(f"  written to    : {cfg.outfile}")
-        if removed_log:
-            print(f"  removal log   : {log_path}")
+    print(f"  written to    : {cfg.outfile}")
+    if removed_log:
+        print(f"  removal log   : {log_path}")
 
-    if tally.get(RESTRICTED, 0) > len(ids) * 0.2 and not cfg.cookie:
-        print("\n  ! Many RESTRICTED results -- set a cookie in the menu (option 4)"
-              "\n    for accurate classification of those.")
+    if tally.get(RESTRICTED, 0) > len(ids) * 0.2:
+        print(f"\n  ! Many RESTRICTED results -- the cookie in {COOKIE_FILE}"
+              "\n    is probably stale. Grab a fresh one and re-run.")
 
     if removed_log:
         print("\n--- REMOVED ---")
@@ -319,10 +319,41 @@ def run(cfg):
 # Interactive menu
 # ---------------------------------------------------------------------------
 
-def default_outfile(infile):
-    """cleaned.txt sitting next to the input, never the input itself."""
-    stem, ext = os.path.splitext(infile)
-    return f"{stem}.cleaned{ext or '.txt'}"
+def load_cookie():
+    """Read cookie.txt next to the script, or explain how to make one and quit.
+
+    The cookie is mandatory: running without it silently turns private and
+    permission-gated assets into RESTRICTED noise, which is exactly the case
+    this tool is supposed to be certain about.
+    """
+    try:
+        with open(COOKIE_FILE, encoding="utf-8-sig") as fh:
+            raw = fh.read()
+    except FileNotFoundError:
+        sys.exit(
+            f"No cookie file at {COOKIE_FILE}\n"
+            "\n"
+            "  Create it before running:\n"
+            "    1. log in to roblox.com in your browser\n"
+            "    2. F12 -> Application / Storage -> Cookies -> roblox.com\n"
+            "    3. copy the ENTIRE .ROBLOSECURITY value, warning banner and all\n"
+            "    4. paste it into cookie.txt as the only contents\n"
+            "\n"
+            "  That value is a full login to your account -- do not share or\n"
+            "  commit it. cookie.txt is gitignored."
+        )
+    except OSError as e:
+        sys.exit(f"Could not read {COOKIE_FILE}: {e}")
+
+    # Cookie values contain no whitespace, so this also repairs a paste that
+    # got hard-wrapped across several lines.
+    cookie = "".join(raw.split())
+    if not cookie:
+        sys.exit(
+            f"{COOKIE_FILE} is empty.\n"
+            "  Paste the .ROBLOSECURITY value into it, then run again."
+        )
+    return cookie
 
 
 def count_ids(path, encoding):
@@ -357,6 +388,35 @@ def ask(prompt_text, default=""):
         return default
 
 
+def clean_path(raw):
+    """Tidy a typed or drag-and-dropped path (quotes, ~, stray whitespace)."""
+    return os.path.expanduser(raw.strip().strip('"\''))
+
+
+def ask_path(prompt_text, must_exist):
+    """Ask for a path until a usable one arrives. No default -- ctrl-c quits.
+
+    Nothing here is guessed from a filename baked into the script: every run
+    states its own input and output explicitly.
+    """
+    while True:
+        try:
+            path = clean_path(input(prompt_text))
+        except (EOFError, KeyboardInterrupt):
+            print()
+            sys.exit("cancelled -- nothing run.")
+        if not path:
+            print("  ! required. type a path, or ctrl-c to quit.")
+            continue
+        if must_exist and not os.path.isfile(path):
+            print(f"  ! no such file: {path}")
+            continue
+        if not must_exist and os.path.isdir(path):
+            print(f"  ! that is a directory: {path}")
+            continue
+        return path
+
+
 def show_menu(cfg):
     n, err = count_ids(cfg.infile, cfg.encoding)
     if err:
@@ -365,7 +425,6 @@ def show_menu(cfg):
         detail = f"  ({n} unique IDs)"
 
     same = os.path.abspath(cfg.infile) == os.path.abspath(cfg.outfile)
-    cookie_state = f"set ({len(cfg.cookie)} chars)" if cfg.cookie else "not set"
 
     print("\n" + "=" * 62)
     print(" Roblox asset-ID verifier")
@@ -373,13 +432,12 @@ def show_menu(cfg):
     print(f"  1) Input file      {cfg.infile}{detail}")
     print(f"  2) Output file     {cfg.outfile}"
           f"{'   ** SAME AS INPUT **' if same else ''}")
-    print(f"  3) Dry run         {'ON  (check only, write nothing)' if cfg.dry_run else 'OFF (will write output)'}")
-    print(f"  4) Cookie          {cookie_state}")
-    print(f"  5) Keep archived   {'ON  (keep them)' if cfg.keep_archived else 'OFF (remove them)'}")
-    print(f"  6) Keep moderated  {'ON  (keep them)' if cfg.keep_moderated else 'OFF (remove them)'}")
-    print(f"  7) Workers         {cfg.workers}")
-    print(f"  8) Encoding        {cfg.encoding}")
+    print(f"  3) Keep archived   {'ON  (keep them)' if cfg.keep_archived else 'OFF (remove them)'}")
+    print(f"  4) Keep moderated  {'ON  (keep them)' if cfg.keep_moderated else 'OFF (remove them)'}")
+    print(f"  5) Workers         {cfg.workers}")
+    print(f"  6) Encoding        {cfg.encoding}")
     print("-" * 62)
+    print(f"     cookie          loaded, {len(cfg.cookie)} chars")
     print("  [enter] run    [q] quit")
 
 
@@ -389,7 +447,7 @@ def menu(cfg):
         choice = ask("> ").lower()
 
         if choice in ("q", "quit", "exit"):
-            print("nothing run.")
+            print("bye.")
             return
         if choice == "":
             n, err = count_ids(cfg.infile, cfg.encoding)
@@ -399,10 +457,15 @@ def menu(cfg):
             if not n:
                 print(f"\n  ! no asset IDs found in {cfg.infile} -- check the encoding.")
                 continue
-            if (not cfg.dry_run
-                    and os.path.abspath(cfg.infile) == os.path.abspath(cfg.outfile)):
+            if os.path.abspath(cfg.infile) == os.path.abspath(cfg.outfile):
                 warn = ask("\n  ! output is the SAME as input -- this overwrites your\n"
                            "    source list in place. type 'yes' to confirm: ")
+                if warn.lower() != "yes":
+                    print("  cancelled.")
+                    continue
+            elif os.path.exists(cfg.outfile):
+                warn = ask(f"\n  ! {cfg.outfile} already exists and will be\n"
+                           "    overwritten. type 'yes' to confirm: ")
                 if warn.lower() != "yes":
                     print("  cancelled.")
                     continue
@@ -412,48 +475,47 @@ def menu(cfg):
             continue
 
         if choice == "1":
-            cfg.infile = ask(f"  input file [{cfg.infile}]: ", cfg.infile)
+            cfg.infile = ask_path(f"  input file [{cfg.infile}]: ", must_exist=True)
         elif choice == "2":
-            cfg.outfile = ask(f"  output file [{cfg.outfile}]: ", cfg.outfile)
+            cfg.outfile = ask_path(f"  output file [{cfg.outfile}]: ", must_exist=False)
         elif choice == "3":
-            cfg.dry_run = not cfg.dry_run
-        elif choice == "4":
-            print("  paste the .ROBLOSECURITY value (input hidden, blank clears it)")
-            try:
-                cfg.cookie = getpass.getpass("  cookie: ").strip()
-            except (EOFError, KeyboardInterrupt):
-                print()
-        elif choice == "5":
             cfg.keep_archived = not cfg.keep_archived
-        elif choice == "6":
+        elif choice == "4":
             cfg.keep_moderated = not cfg.keep_moderated
-        elif choice == "7":
+        elif choice == "5":
             raw = ask(f"  workers [{cfg.workers}]: ", str(cfg.workers))
             if raw.isdigit() and int(raw) > 0:
                 cfg.workers = int(raw)
             else:
                 print("  ! workers must be a positive whole number -- unchanged.")
-        elif choice == "8":
+        elif choice == "6":
             cfg.encoding = ask(f"  encoding [{cfg.encoding}]  "
                                f"(utf-8-sig / cp1252 / utf-16 / latin-1): ", cfg.encoding)
         else:
-            print("  ! pick 1-8, enter to run, or q to quit.")
+            print("  ! pick 1-6, enter to run, or q to quit.")
 
 
 def main():
-    infile = "country-ball-ids.txt"
+    if not sys.stdin.isatty():
+        sys.exit("This script is interactive -- run it from a terminal.")
+
+    cookie = load_cookie()
+
+    print("\n Roblox asset-ID verifier")
+    print(f"   cookie: {COOKIE_FILE} ({len(cookie)} chars)")
+    print("   paths are asked for every run -- nothing is remembered.\n")
+    infile = ask_path("  input file  (the list to check): ", must_exist=True)
+    outfile = ask_path("  output file (the cleaned copy): ", must_exist=False)
+
     cfg = SimpleNamespace(
         infile=infile,
-        outfile=default_outfile(infile),
-        cookie=os.environ.get("ROBLOSECURITY", ""),
-        dry_run=False,
+        outfile=outfile,
+        cookie=cookie,
         keep_archived=False,
         keep_moderated=False,
         workers=WORKERS,
         encoding="utf-8-sig",
     )
-    if not sys.stdin.isatty():
-        sys.exit("This script is interactive -- run it from a terminal.")
     menu(cfg)
 
 

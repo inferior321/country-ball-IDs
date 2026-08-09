@@ -5,8 +5,6 @@
 	134439033575943 — -8 Ball (enemy of 8 ball)
 	89424227870676 — America with White Star in Middle
 	17638665935 — Baby Chick (Chicken)
-	78229815322870 — Bacon Hair Male
-	137593834656864 — Banana Republic
 	18362357705 — Baseball
 	18377722207 — Basketball
 	17694320720 — Blue
@@ -15,7 +13,6 @@
 	86206657381881 — Blue Kitty with Pink Eyes
 	92008978818701 — Blueberry Russian Empire
 	18545886350 — BOTswana
-	101490549138586 — The Brick Empire (Brick)
 	17706385480 — Chicken
 	90069381546831 — Cockroach
 	89474480552790 — Cockroach Rebellion (Cockroach Janta Party)
@@ -23,6 +20,7 @@
 	135008295775519 — Cool Britain
 	109178749587166 — Cool German Empire
 	130099092714653 — Cool Swatzerlond
+	124838849093396 — De Kommer! Haelp OS!
 	98455439074366 — Evil Skeleton
 	73223364458998 — Exclamation Mark
 	112813176029909 — Female Arrow Symbol
@@ -33,6 +31,7 @@
 	114620879245949 — Hard Boiled Egg (Brown)
 	17023292018 — Helleno-Turkism
 	119955292517191 — Male Arrow Symbol
+	135319507602751 — National Animal of Palestine (Gazelle Flag)
 	138983265308615 — Nuclear Bomb Administration
 	135417059226890 — Oil Container (Black)
 	83257645576320 — Oil Container (White)
@@ -48,6 +47,8 @@
 	109892189501700 — Russia Sp00k
 	104688654506191 — Spider
 	18368850111 — Tennisball
+	101490549138586 — The Brick Empire (Brick)
+	104976632444619 — The Tea Empire (Cup of Tea)
 	139024171082650 — Theres Something We Can Do
 	18506587615 — Toxic Radiation Symbol
 	16348579879 — Turtle
@@ -67,7 +68,7 @@
 	16009143376 — Oof Face
 	16004764531 — Pal Face
 	110313428818435 — Sobbing Emoji Face
-	74744184775110 — Verity (Smiley Face)
+	74744184775110 — Verity (Yellow Smiley Face)
 	85709032103259 — Very Evil Fellow (Emoji Face)
 	16008808032 — Winning Smile
 	16005833272 — Woman Face
@@ -80,20 +81,45 @@
 	88158790718762 — Jotaro
 	16010077856 — Pou (Smile 2)
 
+### Roblox (players, lore & items)
+
+	78229815322870 — Bacon Hair Male
+	135754602236025 — Bloxy Cola
+	103372018944268 — BluuDude (Roblox Player)
+	82345665259359 — CoolKidd (Roblox Player)
+	122664732217533 — Evil 1x1x1x1 (Roblox Player)
+	113549979130726 — John Doe (Roblox Player)
+	133186931131665 — John Doe (Roblox Player) [Forsaken]
+	117252076844187 — The Spectre [Forsaken]
+
+#### Roblox Communities
+
+	106842370398669 — Anti-DRP League (Dice Roleplay)
+	18594354133 — Anti-FP
+	112968734973865 — Anti-FRP League
+	121503977553959 — Anti-SRP League
+
 ### Fictional & Alt-History
 
+	136429064240834 — Ajabubian Conjinglement (Transdimensional Beings)
 	129098519739443 — American Empire (Kingdom of America)
 	105677939043359 — American Occupied Iran
+	79424295637191 — American State of Greenland
 	18362836368 — Australia-Hungary
+	137593834656864 — Banana Republic
 	85229086566034 — Bangkok Resistance State
 	77915944383111 — Belgian People's Republic (Communist)
 	129214108367248 — British Russia (Red Ensign + Imperial Russian arms)
+	80836659626131 — Communist Antarctica
 	82425706433164 — Communist Australia
 	135423483234707 — Communist India
+	134919792907248 — Communist Iraq
+	131528200324459 — Communist Republic of Spain
 	17627502245 — Emu Empire
-	17605395685 — The Enclave (Fallout)
+	91998295851789 — European Central Surveillance Force (fictional; Big Brother eye)
 	16831259316 — Federal British Republic
 	97906845989206 — Funmilonix
+	96119844466623 — Great Georgian Empire
 	134253026156751 — Italian Tunisia
 	100535823660170 — Japan with Dragon
 	139552532201415 — Kiwiliyorum Empire
@@ -102,13 +128,16 @@
 	17042252582 — Ottoman-Byzantine
 	131012202475399 — Region of Limbobbia
 	110437731048831 — Republic of Norway
-	15793780734 — The SCP Foundation
 	118897554711754 — Socialist Argentine Republic
 	97058339902928 — Socialist Iberia (Iberia Socialista)
 	136962244650444 — Socialist Rio de Plata
-	17094045626 — Space Mexico
+	125061104913840 — Socialist Union of Laos-Vietnam
 	98487400591200 — Spaint
+	17605395685 — The Enclave (Fallout)
+	79248303180422 — The Kingdom of Jerusalem (Fictional Flag)
+	15793780734 — The SCP Foundation
 	84586395334124 — Tripolitania (fictional country)
+	97832355228525 — United American Soviet States (UASS)
 
 #### TerminatorLand
 
@@ -148,6 +177,15 @@
 	92011034723731 — PSO J318.5-22
 	133579543445932 — WASP-193b
 
+### Space & Astronautics
+
+	90480953928073 — International Space Station (ISS)
+	127864664222769 — Mexican Space Project of the Moon
+	17094045626 — Space Mexico
+	112329659358130 — Space North Korea
+	109466018071549 — Space Poland
+	124666324688196 — Space South Korea
+
 ### Earth (variants)
 
 	112773956863924 — Earth (Blank)
@@ -160,6 +198,7 @@
 ### Geographic & Conceptual
 
 	17751298225 — Antarctica
+	111010852293860 — Enewetak Atoll
 	97561934958974 — North Pole
 
 ### Landmarks & Infrastructure
@@ -168,8 +207,9 @@
 	107568742486957 — Interstate 495 (highway shield)
 	131695125523477 — Statue of Liberty
 
-### Company Towns & Oddities
+### Companies, Company Towns & Oddities
 
+	99637651099606 — CountryBall Motors (fictional vehicle maker, Michigan)
 	124854139712687 — Fordlandia
 
 ### Armies & Military Units
@@ -178,6 +218,7 @@
 	131178272843706 — Argentine Air Force
 	94609660279597 — Argentine Army
 	89064589710406 — Argentine Navy
+	92365570319551 — Banner of the Papal Zouaves of France
 	16337035171 — Brunswick Ducal Corps
 	17407049631 — Brunswick Ducal Corps [Better]
 	17229608644 — Canadian Air Force
@@ -189,9 +230,11 @@
 	17353855284 — KGL
 	114109635548798 — KGL2
 	18811946118 — Lombard Legion
+	131466189120427 — Ministry of National Defense (Poland)
 	16069628674 — Monaco's Legion
 	17309270911 — Napoleonic Irlande Legion
 	18795718368 — National Guard (USA)
+	129763032003364 — National Republican Army (Russia)
 	16354251582 — Ottoman Navalid
 	104926178867542 — Proa (Naval Ensign of Venezuela)
 	18809323551 — Prussian Military Banner
@@ -211,6 +254,7 @@
 	16741846020 — Serbian Armed Forces
 	18518053825 — Swedish Armed Forces
 	89793103913201 — Trigarant Army (Army of the Three Guarantees, Mexico 1821)
+	109818485533927 — United States Space Force
 	16757143557 — US Air Force
 	16757111504 — US Army
 	16988722600 — US Coast Guard
@@ -239,6 +283,10 @@
 	15721950253 — Organization of Free Nations
 	114688498728993 — The Arctic Council
 	91073457753466 — The Commonwealth of Independent States
+
+### Religions & Religious Orders
+
+	116594095643537 — Armenian Christianity
 	121295273397307 — VII Day Adventist Church
 
 ### Napoleonic Era
@@ -254,13 +302,13 @@
 	18259087501 — French Empire [1789]
 	18966584247 — Kingdom of Westphalia
 	18122209039 — Lucca and Piombino
-	18177269300 — Roman Republic [1798-99]
 	17182995564 — Napoleonic France
 	16896557175 — Napoleonic Italy
 	18265335839 — Napoleonic Portugal
 	17322579533 — Napoleonic Royal Revolutionaries
 	17284712984 — Napoleonic Sweden
 	113163072508724 — Napoleonic Württemburg
+	18177269300 — Roman Republic [1798-99]
 	138236696954845 — Westphalian Republic
 
 ### WWII & Resistance
@@ -276,6 +324,7 @@
 
 	139618361396339 — Combat Groups of the Working Class (Germany)
 	16322605616 — Communist Poland
+	97270700510158 — Czechoslovak Socialist Republic
 	114903541558450 — East Germany
 	87487056359482 — German Democratic Republic
 	124438160183397 — German Socialist Republic Council
@@ -311,7 +360,6 @@
 ### German States (HRE / Confederation / Empire)
 
 	16034721583 — Austria-Bavaria
-	18877688924 — Baden-Württemberg
 	18301740810 — Bavaria
 	94026960781647 — Bavaria [Alts]
 	18476866202 — Bayern-Landshut [Var 1]
@@ -326,11 +374,10 @@
 	17353852384 — Electorate of Hanover
 	18400415386 — Electorate of Salzburg
 	18400418180 — Electorate of Württemberg
-	89544253857834 — Fürstentum Westfalen
 	16831517521 — Free Prussia
+	89544253857834 — Fürstentum Westfalen
 	83188646292139 — German Empire
 	16249186350 — Germany With Coat Of Arms
-	102257293096115 — Hamburg, Germany
 	18342236954 — Hesse
 	18966588355 — Hesse-Darmstadt
 	18966608060 — Hesse-Nassau
@@ -342,19 +389,25 @@
 	18966582178 — Lower Saxony
 	17495685534 — Margraviate of Brandenburg
 	16048618569 — Mecklenburg-Schwerin
-	18506324731 — Munich
-	18825485118 — North-Rhine Westphalia
 	18476882984 — Palatinate
 	17716908448 — Prussian Hohenzollerns
 	17586609141 — Reuss-Schleiz
-	122128541415601 — Rhineland Palatinate
 	18250182705 — Saxony
-	18259939452 — Saxony
-	120872686690058 — Saxony-Anhalt
+	18259939452 — Saxony [2]
 	95180991264852 — The Hohenstaufen Dynasty
-	18400417057 — Würzburg
 	17513654657 — West Prussia
 	18966589826 — Worms [Germany]
+	18400417057 — Würzburg
+
+#### Modern German states & cities
+
+	18877688924 — Baden-Württemberg
+	89953546009968 — Baden-Württemberg-Bayern
+	102257293096115 — Hamburg, Germany
+	18506324731 — Munich
+	18825485118 — North-Rhine Westphalia
+	122128541415601 — Rhineland Palatinate
+	120872686690058 — Saxony-Anhalt
 
 ### Austria, Bohemia & Habsburg Crownlands
 
@@ -377,12 +430,13 @@
 	18159774357 — Duchy of Milan
 	18362697937 — Duchy of Milan [2]
 	18143455181 — Greece
-	17575972811 — Padania (northern Italy)
 	82770956017842 — Kingdom of Italy [HRE]
 	17548817592 — Kingdom of Naples [1808]
+	17575972811 — Padania (northern Italy)
 	18121575346 — Republic of Venice
 	18981534713 — Sardinia (Four Moors, island region)
 	15982581094 — Sicily
+	138699141797321 — Venice (City flag)
 
 ### Ottoman & Byzantine
 
@@ -457,8 +511,8 @@
 	87488759890157 — Flag of the Spanish Empire (Cross of Burgundy)
 	16923395999 — Galicia (Spain)
 	18159786593 — Habsburg Spain
-	17476507286 — PVZ [?Provincia de Zaragoza — needs confirming]
 	18881940534 — Palma de Mallorca, España
+	17476507286 — PVZ [?Provincia de Zaragoza — needs confirming]
 	118443679363953 — Spanish Empire CoA
 
 ### Scandinavia & Nordics
@@ -479,6 +533,7 @@
 
 	16263054804 — Aland Islands
 	17627513533 — Baltic Union
+	84254010241645 — Banner of the Wettin Kings (Polish-Lithuanian Commonwealth)
 	16178647043 — Courland
 	16023366442 — Duchy of Lithuania
 	17229626741 — Estonia [CoA]
@@ -490,7 +545,9 @@
 #### Poland — cities & towns
 
 	95423941363031 — Białystok
+	107889380869093 — Golub-Dobrzyń
 	115879238080961 — Przewóz (western Poland village)
+	114371645583342 — Suwałki
 	15716068259 — Warsaw
 	71563165219138 — Zabrze
 
@@ -559,8 +616,8 @@
 	83190258452438 — Crimea People's Republic
 	70876504718416 — Crimea With Greater CoA
 	74459491054938 — Dagestan
-	17294531120 — Don Cossacks (White movement)
 	100497893724423 — Dimitry Donskoy at the Battle of Kulikovo
+	17294531120 — Don Cossacks (White movement)
 	17532014047 — Free Dagestan
 	98145051870615 — Imperial Russian CoA (1721-1725)
 	17294519008 — Kuban People's Republic (White movement)
@@ -576,7 +633,7 @@
 	100761302565011 — Russia Royal Standard (1858-1917)
 	90735158682912 — Russia Tsardom
 	17576057469 — Russian Alaska
-	116040488165267 — Russian Alaska
+	116040488165267 — Russian Alaska [2]
 	92842951121009 — Russian America
 	93245873035316 — Russian Empire (1858-1896)
 	90686047891193 — Russian Empire (Greater Coat of Arms)
@@ -643,6 +700,7 @@
 	16923334946 — South Yemen
 	17755696691 — Sultanate of Aceh
 	16536499188 — Syria
+	99088243723964 — Syria (1945-1958 Coat of Arms)
 	16064311853 — Syrian Kingdom
 	74541214305873 — The Goryeo Dynasty
 	17897451348 — Tokyo
@@ -655,7 +713,7 @@
 	17503665346 — County of Edessa
 	16593916110 — Kingdom of Cilicia
 	16579958816 — Kingdom of Cyprus
-	79900075286699 — Kingdom of Cyprus
+	79900075286699 — Kingdom of Cyprus [2]
 	16579964288 — Kingdom of Jerusalem
 	17504226157 — Principality of Antioch
 
@@ -736,6 +794,7 @@
 
 ### United States — Cities
 
+	89355544283939 — Amarillo, TX
 	132808946166688 — Anaheim, CA (2018-2019)
 	16636246820 — Anchorage
 	125629226085896 — Ann Arbor, MI
@@ -754,6 +813,8 @@
 	82283332000557 — Kansas City, MO
 	122444436251051 — Kennebunkport, ME
 	119810819005265 — Lincoln, NE
+	81604689050744 — McKinney, TX
+	95621408031826 — Naperville, IL
 	112947330692484 — New York City (no logo)
 	17525879572 — New York City (full flag with logo)
 	124970816802844 — Norman, OK
@@ -776,6 +837,7 @@
 	132048493071073 — Mendoza, Argentina
 	101173610253794 — Paraguay
 	77171736311990 — Peru
+	96207291935062 — Rio de Janeiro, Brazil
 	139696855645963 — Tucumán, Argentina
 
 ### Mexico (states & regions)
@@ -835,6 +897,7 @@
 	84890564549540 — Guadeloupe
 	105603187935864 — Jersey
 	80291425242342 — Mayotte
+	119135217898376 — Pitcairn Islands
 	84284248761508 — Prince Edward Islands (South Africa)
 	16833469826 — Saint Barthelemy
 	134899113074968 — Saint Vincent and the Grenadines
@@ -842,7 +905,4 @@
 
 ### Micronations & Unrecognized States
 
-	112968734973865 — Anti FRP League
-	121503977553959 — Anti SRP League
-	18594354133 — Anti-FP
 	16988767904 — Liberland

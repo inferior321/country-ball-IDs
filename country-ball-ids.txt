@@ -12,6 +12,7 @@
 	73520987748987 — Blue British Colony
 	86206657381881 — Blue Kitty with Pink Eyes
 	92008978818701 — Blueberry Russian Empire
+	133224036566266 — Bosko Currency
 	18545886350 — BOTswana
 	17706385480 — Chicken
 	90069381546831 — Cockroach
@@ -46,7 +47,6 @@
 	79749486150630 — Red British Colony
 	109892189501700 — Russia Sp00k
 	104688654506191 — Spider
-	18368850111 — Tennisball
 	101490549138586 — The Brick Empire (Brick)
 	104976632444619 — The Tea Empire (Cup of Tea)
 	139024171082650 — Theres Something We Can Do
@@ -84,7 +84,6 @@
 ### Roblox (players, lore & items)
 
 	78229815322870 — Bacon Hair Male
-	135754602236025 — Bloxy Cola
 	103372018944268 — BluuDude (Roblox Player)
 	82345665259359 — CoolKidd (Roblox Player)
 	122664732217533 — Evil 1x1x1x1 (Roblox Player)
@@ -126,6 +125,9 @@
 	85248852803165 — Lemania (Land of the Lemon)
 	18577631222 — Monacan Empire
 	17042252582 — Ottoman-Byzantine
+	96245208559717 — Patchwork of American Communes
+	125889781842849 — People's Lordship Over Japan
+	140332483954661 — People's Republic of Manchuria
 	131012202475399 — Region of Limbobbia
 	110437731048831 — Republic of Norway
 	118897554711754 — Socialist Argentine Republic
@@ -152,6 +154,7 @@
 	106074672681934 — Proto Saturn
 	95879144095697 — Realistic Sun
 	134051017182233 — Saturn
+	103867825134445 — Saturn (Solarballs)
 	123085145920509 — Terraformed Mars
 	78075256286721 — Terraformed Mercury
 	107298441006652 — Terraformed Venus
@@ -172,6 +175,7 @@
 	83759750247703 — Kepler-186f
 	128810437886963 — Observable Universe
 	109944182237275 — Proxima b
+	108213416336790 — Proxima b [2]
 	80925268522117 — Proxima c
 	79946664820035 — Proxima d
 	92011034723731 — PSO J318.5-22
@@ -198,14 +202,33 @@
 ### Geographic & Conceptual
 
 	17751298225 — Antarctica
-	111010852293860 — Enewetak Atoll
 	97561934958974 — North Pole
+	100532748451463 — Transglobe Expedition
+
+#### Marshall Islands Atolls
+
+	90285160153953 — Bikini Atoll
+	111010852293860 — Enewetak Atoll
+	111444435511271 — Kwajalein Atoll
+	113358904970077 — Lae Atoll
+	80880989769778 — Mefit Atoll
+	105985782046721 — Mili Atoll
+	122179438884649 — Wotho Atoll
+	103464241604009 — Wotje Atoll (Leaf Empire)
 
 ### Landmarks & Infrastructure
 
 	70496674601395 — Henryk Arctowski Polish Antarctic Station
 	107568742486957 — Interstate 495 (highway shield)
 	131695125523477 — Statue of Liberty
+
+### Archaeological & Paleontological Sites
+
+	96281866950764 — Cueva del Chiquihuite (Cave of Chiquihuite)
+	126623517717000 — El Fin del Mundo (Sonora)
+	132530640746644 — Hoyo Negro (Quintana Roo)
+	104506475296501 — Sierra de San Francisco
+	110723064802669 — Tepexpan (old human skeletal remains)
 
 ### Companies, Company Towns & Oddities
 
@@ -300,6 +323,7 @@
 	15827147124 — Duchy of Warsaw
 	17888088346 — First French Republic
 	18259087501 — French Empire [1789]
+	133372136222754 — Holy Alliance
 	18966584247 — Kingdom of Westphalia
 	18122209039 — Lucca and Piombino
 	17182995564 — Napoleonic France
@@ -377,6 +401,7 @@
 	16831517521 — Free Prussia
 	89544253857834 — Fürstentum Westfalen
 	83188646292139 — German Empire
+	123496323245610 — German Empire [1871-1918]
 	16249186350 — Germany With Coat Of Arms
 	18342236954 — Hesse
 	18966588355 — Hesse-Darmstadt
@@ -412,6 +437,8 @@
 ### Austria, Bohemia & Habsburg Crownlands
 
 	15723348175 — Austria
+	97728446738281 — Austria Flag (Map of Austria)
+	96848544234119 — Austrian Empire Coat of Arms
 	18562887433 — Austrian Silesia
 	18562890148 — Carinthia
 	17814794606 — Carniola [Historical Tricolor]
@@ -421,6 +448,7 @@
 	17733806311 — Duchy of Styria
 	18373765476 — Kingdom of Bohemia
 	18546103475 — Lower Austria
+	83426239349647 — Moravia (region in Czech Republic)
 	89041814304342 — Silesia 1869
 	17899081152 — Upper Austria
 	18562844527 — Vorarlberg
@@ -477,6 +505,7 @@
 	72372283279429 — Île-de-France
 	17575646715 — Moresnet
 	16843677004 — Normandy
+	139691400401158 — Strasbourg Coat of Arms (France)
 	97087790670054 — The Belgian Dynasty
 	132470212681496 — The Seventeen Provinces
 	17013886336 — United Kingdom of Netherlands
@@ -546,6 +575,7 @@
 
 	95423941363031 — Białystok
 	107889380869093 — Golub-Dobrzyń
+	72703037631990 — Prudnik
 	115879238080961 — Przewóz (western Poland village)
 	114371645583342 — Suwałki
 	15716068259 — Warsaw
@@ -657,12 +687,16 @@
 ### Caucasus & Central Asia
 
 	17294502565 — Abkhazia
+	72846543594823 — Chechen Autonomous Soviet Federation
+	83149632363759 — Chechen Republic of Ichkeria
+	90126774546442 — Chechen-Ingushetian Republic
 	16008690733 — Kazakh Khanate
 	89524793648183 — Kazakhstan
 	128209855989070 — Kyrgyzstan
 	89730562171589 — Mountainous Republic of the Northern Caucasus
 	18111981213 — Nagorno Karabakh [FLIPPED]
 	18377684562 — Nagorno Karabakh
+	86921062465537 — President of the Chechen Republic of Ichkeria
 	17880777557 — South Ossetia
 
 ### Middle East, Asia & Africa
@@ -676,6 +710,7 @@
 	75334550356237 — Greater Thai Empire
 	92543241445265 — Hexi (Chinese province)
 	76756044596227 — Hunan Clique
+	130956011700744 — Indian States and Union Territories
 	18618470635 — Indochina
 	16542769684 — Iraq [1991-2004]
 	16512230711 — Islamic Organization

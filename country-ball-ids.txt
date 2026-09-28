@@ -5,8 +5,6 @@
 	134439033575943 — -8 Ball (enemy of 8 ball)
 	89424227870676 — America with White Star in Middle
 	17638665935 — Baby Chick (Chicken)
-	18362357705 — Baseball
-	18377722207 — Basketball
 	17694320720 — Blue
 	77632453767889 — Blue Argentina Colony
 	73520987748987 — Blue British Colony
@@ -28,7 +26,6 @@
 	15738330143 — Filipines Philiped
 	92222764388902 — Finnish Michigan
 	16008180864 — Fire in the Hole
-	18400260737 — Football (Soccer Ball)
 	114620879245949 — Hard Boiled Egg (Brown)
 	17023292018 — Helleno-Turkism
 	119955292517191 — Male Arrow Symbol
@@ -40,11 +37,11 @@
 	15983896718 — Pig
 	87218821541098 — Polish Cow Meme
 	99231912927059 — Polish Cow Meme (with Poland)
-	94133757735408 — Portuguese Player of Football (World Cup 2026)
 	122335615445025 — Question Mark
 	72273948673477 — Question Mark (Unknown Flag Symbol)
 	71419858692476 — Red Argentina Colony
 	79749486150630 — Red British Colony
+	110636550598892 — Republic of Catland
 	109892189501700 — Russia Sp00k
 	104688654506191 — Spider
 	101490549138586 — The Brick Empire (Brick)
@@ -80,6 +77,15 @@
 	17740936750 — CaseOh
 	88158790718762 — Jotaro
 	16010077856 — Pou (Smile 2)
+	120799586368897 — Roaring Knight From Deltarune (Improved Version)
+	127188267535618 — Roaring Knight From Deltarune (v1)
+
+#### Sports
+
+	18362357705 — Baseball
+	18377722207 — Basketball
+	18400260737 — Football (Soccer Ball)
+	94133757735408 — Portuguese Player of Football (World Cup 2026)
 
 ### Roblox (players, lore & items)
 
@@ -98,47 +104,68 @@
 	112968734973865 — Anti-FRP League
 	121503977553959 — Anti-SRP League
 
+### Countryball Universe
+
+	123077135990719 — Ballia Sports League
+	99637651099606 — CountryBall Motors (fictional vehicle maker, Michigan)
+	108124800565802 — FIFA World Cup (Countryball World)
+	116319798608492 — The Ballia Eliit 11
+
 ### Fictional & Alt-History
 
 	136429064240834 — Ajabubian Conjinglement (Transdimensional Beings)
 	129098519739443 — American Empire (Kingdom of America)
 	105677939043359 — American Occupied Iran
 	79424295637191 — American State of Greenland
+	138608749604959 — Army of Death
 	18362836368 — Australia-Hungary
 	137593834656864 — Banana Republic
 	85229086566034 — Bangkok Resistance State
-	77915944383111 — Belgian People's Republic (Communist)
 	129214108367248 — British Russia (Red Ensign + Imperial Russian arms)
-	80836659626131 — Communist Antarctica
-	82425706433164 — Communist Australia
-	135423483234707 — Communist India
-	134919792907248 — Communist Iraq
-	131528200324459 — Communist Republic of Spain
 	17627502245 — Emu Empire
 	91998295851789 — European Central Surveillance Force (fictional; Big Brother eye)
+	132507144561144 — European Stevanland
 	16831259316 — Federal British Republic
 	97906845989206 — Funmilonix
 	96119844466623 — Great Georgian Empire
+	93119281144760 — Green Republic
 	134253026156751 — Italian Tunisia
 	100535823660170 — Japan with Dragon
 	139552532201415 — Kiwiliyorum Empire
 	85248852803165 — Lemania (Land of the Lemon)
 	18577631222 — Monacan Empire
 	17042252582 — Ottoman-Byzantine
-	96245208559717 — Patchwork of American Communes
 	125889781842849 — People's Lordship Over Japan
-	140332483954661 — People's Republic of Manchuria
+	121033222887704 — Piłsudski's Polish-Lithuanian Commonwealth
 	131012202475399 — Region of Limbobbia
 	110437731048831 — Republic of Norway
-	118897554711754 — Socialist Argentine Republic
-	97058339902928 — Socialist Iberia (Iberia Socialista)
-	136962244650444 — Socialist Rio de Plata
-	125061104913840 — Socialist Union of Laos-Vietnam
+	120992452094466 — Revanchist State of Japan
 	98487400591200 — Spaint
 	17605395685 — The Enclave (Fallout)
 	79248303180422 — The Kingdom of Jerusalem (Fictional Flag)
 	15793780734 — The SCP Foundation
 	84586395334124 — Tripolitania (fictional country)
+
+#### Communist & Socialist Alt-States
+
+	116687074738514 — Baltic Socialist Republic
+	77915944383111 — Belgian People's Republic (Communist)
+	80836659626131 — Communist Antarctica
+	82425706433164 — Communist Australia
+	135423483234707 — Communist India
+	134919792907248 — Communist Iraq
+	131528200324459 — Communist Republic of Spain
+	121476494669083 — Communist Spain
+	86153988413534 — Communists of New Europe
+	104024906891448 — Free Commune of Thailand (Anarchy)
+	95014512158821 — Kamchatka Soviet Fleet Remnants
+	96245208559717 — Patchwork of American Communes
+	140332483954661 — People's Republic of Manchuria
+	118897554711754 — Socialist Argentine Republic
+	84581019465004 — Socialist Asia
+	97058339902928 — Socialist Iberia (Iberia Socialista)
+	136962244650444 — Socialist Rio de Plata
+	125061104913840 — Socialist Union of Laos-Vietnam
 	97832355228525 — United American Soviet States (UASS)
 
 #### TerminatorLand
@@ -198,6 +225,8 @@
 	89208590218326 — Earth State Flag Map
 	98046584069325 — Globe Earth
 	131587620191924 — Pangea Earth
+	77884871722439 — Proto Earth v2
+	114148425563035 — The Greater Coat of Arms of Earth
 
 ### Geographic & Conceptual
 
@@ -232,7 +261,6 @@
 
 ### Companies, Company Towns & Oddities
 
-	99637651099606 — CountryBall Motors (fictional vehicle maker, Michigan)
 	124854139712687 — Fordlandia
 
 ### Armies & Military Units
@@ -255,6 +283,7 @@
 	18811946118 — Lombard Legion
 	131466189120427 — Ministry of National Defense (Poland)
 	16069628674 — Monaco's Legion
+	117353942868397 — Namibia War Flag
 	17309270911 — Napoleonic Irlande Legion
 	18795718368 — National Guard (USA)
 	129763032003364 — National Republican Army (Russia)
@@ -290,6 +319,7 @@
 	100608520146645 — Bosnian Police (Herzegovina)
 	128841659335673 — Bosnian Police 1992
 	94902331977406 — CONELRAD (Control of Electromagnetic Radiation)
+	78612976849057 — Croatian Police
 	16006771200 — FBI
 	116665853834519 — New York Police Department
 	131682494447778 — South Korean Police
@@ -309,7 +339,6 @@
 
 ### Religions & Religious Orders
 
-	116594095643537 — Armenian Christianity
 	121295273397307 — VII Day Adventist Church
 
 ### Napoleonic Era
@@ -389,7 +418,6 @@
 	18476866202 — Bayern-Landshut [Var 1]
 	18506563707 — Bayern-München
 	18679201633 — Brandenburg, Prussia
-	18966598889 — Bremen
 	17716906629 — Constitutional Hohenzollerns
 	18362659834 — Duchy of Bavaria
 	18112700434 — Duchy of Lower Saxony
@@ -421,8 +449,15 @@
 	18259939452 — Saxony [2]
 	95180991264852 — The Hohenstaufen Dynasty
 	17513654657 — West Prussia
-	18966589826 — Worms [Germany]
 	18400417057 — Würzburg
+
+#### Free & Hanseatic Cities
+
+	18966598889 — Bremen
+	113997715613431 — Free City of Bremen
+	73066279893291 — Free City of Frankfurt
+	81777310078952 — Free City of Hamburg
+	18966589826 — Worms [Germany]
 
 #### Modern German states & cities
 
@@ -479,13 +514,12 @@
 ### Ancient & Classical
 
 	96195682148382 — Achaemenid Empire
-	18159804237 — Arsacid Armenia
 	84688827015322 — Aztec Triple Alliance
 	114622611398232 — Christmas Achaemenid
 	120300302245626 — Lycaonia (Lycaonian Empire)
 	105269664689692 — Mauryan Empire
 	18159809131 — Parthia
-	100237076201226 — The Armenian Kingdom
+	91178043278870 — The Shahdad Standard (Jiroft Civilization)
 
 ### France, Low Countries & W. Europe
 
@@ -499,6 +533,7 @@
 	17699656728 — Burgundy
 	16230562226 — Champagne
 	16179848376 — Civil Ensign of Luxembourg
+	123669451953596 — Duchy of Limburg (Netherlands)
 	17320583185 — Dutch Empire
 	17719231423 — Flanders
 	16734856594 — Francia
@@ -543,6 +578,7 @@
 	18881940534 — Palma de Mallorca, España
 	17476507286 — PVZ [?Provincia de Zaragoza — needs confirming]
 	118443679363953 — Spanish Empire CoA
+	131775312569893 — Spanish Movement For A Republic
 
 ### Scandinavia & Nordics
 
@@ -574,9 +610,11 @@
 #### Poland — cities & towns
 
 	95423941363031 — Białystok
+	92868082576729 — Chelmno (Poland)
 	107889380869093 — Golub-Dobrzyń
 	72703037631990 — Prudnik
 	115879238080961 — Przewóz (western Poland village)
+	130156018869439 — Rypin (Poland)
 	114371645583342 — Suwałki
 	15716068259 — Warsaw
 	71563165219138 — Zabrze
@@ -648,6 +686,7 @@
 	74459491054938 — Dagestan
 	100497893724423 — Dimitry Donskoy at the Battle of Kulikovo
 	17294531120 — Don Cossacks (White movement)
+	139071399466139 — Don Soviet Republic
 	17532014047 — Free Dagestan
 	98145051870615 — Imperial Russian CoA (1721-1725)
 	17294519008 — Kuban People's Republic (White movement)
@@ -694,10 +733,19 @@
 	89524793648183 — Kazakhstan
 	128209855989070 — Kyrgyzstan
 	89730562171589 — Mountainous Republic of the Northern Caucasus
-	18111981213 — Nagorno Karabakh [FLIPPED]
-	18377684562 — Nagorno Karabakh
 	86921062465537 — President of the Chechen Republic of Ichkeria
 	17880777557 — South Ossetia
+
+### Armenia
+
+	116594095643537 — Armenian Christianity
+	18159804237 — Arsacid Armenia
+	75139977715457 — First Armenian Church (Etchmiadzin Cathedral)
+	90260479066673 — Greater Armenia of 1920
+	16593916110 — Kingdom of Cilicia
+	18377684562 — Nagorno Karabakh
+	18111981213 — Nagorno Karabakh [FLIPPED]
+	100237076201226 — The Armenian Kingdom
 
 ### Middle East, Asia & Africa
 
@@ -719,6 +767,7 @@
 	15723275924 — Joseon
 	16579081584 — Kingdom of Benin (Edo, Nigeria)
 	16907768965 — Kingdom of Yemen
+	130596027395542 — Kon Tum (old province of Vietnam)
 	107244060705737 — Korean Empire (The Last Empire)
 	16923286889 — Kurdistan
 	138213166391152 — Laguna, Philippines
@@ -746,7 +795,6 @@
 #### Crusader & Latin East states
 
 	17503665346 — County of Edessa
-	16593916110 — Kingdom of Cilicia
 	16579958816 — Kingdom of Cyprus
 	79900075286699 — Kingdom of Cyprus [2]
 	16579964288 — Kingdom of Jerusalem
@@ -869,6 +917,7 @@
 
 ### South America
 
+	112226775415232 — Magdalena Department (Colombia)
 	132048493071073 — Mendoza, Argentina
 	101173610253794 — Paraguay
 	77171736311990 — Peru
@@ -941,3 +990,5 @@
 ### Micronations & Unrecognized States
 
 	16988767904 — Liberland
+
+### UNSORTED/UNVERIFIED (SORT & VERIFY EXISTENCE BEFORE FINAL POSTING ON GOOGLE DOC)
